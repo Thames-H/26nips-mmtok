@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mmtok"
+version = "1.0.0"
+description = "MMTok: Multimodal Coverage Maximization for Efficient Inference of VLMs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers==4.57.3",
+    "loguru",
+    "accelerate",
+    "pillow",
+    "decord",
+    "qwen-vl-utils",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mmtok*"]
